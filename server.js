@@ -62,6 +62,13 @@ app.post("/api/notes", function(req, res) {
   res.json(newNote);
 });
 
+app.delete('/api/notes/:title', function (req, res) {
+  var newArray = []
+  var newNotes = req.body;
+  newArray.push(newNotes);
+  notes = newArray;
+  res.json(newArray);
+})
 // Starts the server to begin listening
 // =============================================================
 app.get("/", function(req, res) {
